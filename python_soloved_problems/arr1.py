@@ -1,11 +1,10 @@
 def getSecondOrderElements(n: int, a):
     var1 = min(a)
     var2 = max(a)
-    a.remove(var1)
-    a.remove(var2)
+    a = [x for x in a if x != var1 and x != var2]  # Remove all instances of min and max
     smin = min(a)
     smax = max(a)
-    return [smin, smax]
+    return [smax, smin]
 
 # Example usage:
 n = 5
